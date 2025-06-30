@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiacare: Pitch Deck Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Chosen Color Palette: Inspired by "Brilliant Blues & Warm Accents" */
+        /* Primary Blue: #005f73 */
+        /* Secondary Blue: #0a9396 */
+        /* Accent Yellow/Orange: #ee9b00 */
+        /* Light Accent/Background: #94d2bd */
+        /* Neutral: #f8f9fa, #e9d8a6 */
+        /* Text: #001219, #495057, #6c757d */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 2.5rem;
+            color: #001219;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            color: #495057;
+            max-width: 48rem;
+            margin: 0.5rem auto 0;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Neither Mermaid JS NOR SVG were used anywhere in the output. -->
+    <!-- This infographic visually presents the Sentiacare pitch deck.
+         It follows a narrative flow: Introduction, Problem/Solution, Market, Competitive Edge,
+         Roadmap, Business Model, Metrics, and Call to Action.
+         Visualizations include:
+         - Market Growth: Line Chart (Chart.js) - Goal: Change
+         - Competitive Edge: Custom HTML/CSS diagram (Venn-like) - Goal: Compare/Organize
+         - Roadmap: Custom HTML/CSS timeline - Goal: Organize
+         - Monetization: HTML/CSS pricing tiers - Goal: Organize
+         - Go-to-Market: Custom HTML/CSS funnel - Goal: Organize
+         - KPIs: Large numbers in cards - Goal: Inform
+         All charts use Chart.js with Canvas rendering. Plotly.js was not deemed necessary for the chosen data types.
+    -->
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#005f73]">Sentiacare</h1>
+            <a href="#cta" class="bg-[#0a9396] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[#005f73] transition-colors">Join Our Mission</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="text-center py-20 px-6 bg-white">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#001219] tracking-tight">Harmonize Your Life. Simplify Your Care.</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Sentiacare is the intelligent companion that proactively optimizes your well-being, productivity, and caregiving, all in one place.</p>
+        </section>
+
+        <section id="problem-solution" class="py-16 px-6">
+            <div class="container mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="section-title">The Challenge We Address</h2>
+                        <p class="section-subtitle">Modern life is fragmented and overwhelming, leading to burnout and gaps in care. We pinpoint key pain points that demand a holistic solution.</p>
+                        <div class="mt-8 space-y-6">
+                            <div class="card flex items-start">
+                                <div class="text-3xl mr-4 text-[#ee9b00]">🧩</div>
+                                <div>
+                                    <h3 class="font-bold text-xl">Fragmentation</h3>
+                                    <p class="text-gray-600 mt-1">Users are overwhelmed juggling countless apps for productivity, wellness, and caregiving, leading to a disconnected experience.</p>
+                                </div>
+                            </div>
+                            <div class="card flex items-start">
+                                <div class="text-3xl mr-4 text-[#ee9b00]">🌪️</div>
+                                <div>
+                                    <h3 class="font-bold text-xl">Overwhelm & Burnout</h3>
+                                    <p class="text-gray-600 mt-1">Demanding lifestyles cause stress, forgotten tasks, inconsistent health habits, and a decline in overall well-being.</p>
+                                </div>
+                            </div>
+                            <div class="card flex items-start">
+                                <div class="text-3xl mr-4 text-[#ee9b00]">👨‍👩‍👧‍👦</div>
+                                <div>
+                                    <h3 class="font-bold text-xl">Caregiving Burden</h3>
+                                    <p class="text-gray-600 mt-1">Families struggle with the emotional and logistical load of monitoring, supporting, and coordinating care for loved ones.</p>
+                                </div>
+                            </div>
+                            <div class="card flex items-start">
+                                <div class="text-3xl mr-4 text-[#ee9b00]">🏥</div>
+                                <div>
+                                    <h3 class="font-bold text-xl">Healthcare Gaps</h3>
+                                    <p class="text-gray-600 mt-1">Medical professionals lack real-time, holistic patient adherence data, hindering effective follow-up and personalized care.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#005f73] p-8 rounded-2xl text-white">
+                        <h2 class="text-4xl font-extrabold text-center">The Sentiacare Solution</h2>
+                        <p class="mt-2 text-lg text-center text-[#e9d8a6]">An intelligent, unified platform for holistic support, designed to bring harmony back to your life.</p>
+                        <div class="mt-8 space-y-6">
+                            <div class="bg-white/20 p-6 rounded-lg">
+                                <h3 class="font-bold text-xl">One Intelligent Platform</h3>
+                                <p class="mt-1 opacity-90">A single ecosystem for proactive well-being, productivity optimization, and comprehensive care, reducing app fatigue.</p>
+                            </div>
+                            <div class="bg-white/20 p-6 rounded-lg">
+                                <h3 class="font-bold text-xl">AI-Driven Personalization</h3>
+                                <p class="mt-1 opacity-90">Adaptive support that learns your unique patterns and provides intelligent, timely recommendations tailored to your needs.</p>
+                            </div>
+                            <div class="bg-white/20 p-6 rounded-lg">
+                                <h3 class="font-bold text-xl">Seamless Connection</h3>
+                                <p class="mt-1 opacity-90">Effortlessly links individuals, families, and eventually, healthcare providers for truly coordinated and transparent care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market" class="py-16 px-6 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title">A Massive & Growing Market</h2>
+                <p class="section-subtitle">Sentiacare is positioned at the intersection of several multi-billion dollar industries experiencing exponential growth, driven by powerful global trends.</p>
+                <div class="grid md:grid-cols-2 gap-12 mt-12">
+                    <div class="card">
+                        <h3 class="font-bold text-2xl mb-4">Digital Health Market Projection</h3>
+                        <p class="text-gray-600 mb-4">The global digital health market is forecast to grow significantly, indicating robust demand for innovative, integrated solutions like Sentiacare. This chart illustrates the projected market size in billions of USD over the next few years, showing a clear upward trend.</p>
+                        <div class="chart-container">
+                            <canvas id="marketChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card text-left">
+                        <h3 class="font-bold text-2xl mb-4">Key Market Drivers</h3>
+                        <p class="text-gray-600 mb-4">Several macro trends are fueling the demand for comprehensive well-being and care platforms, creating a fertile ground for Sentiacare's growth.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-2xl mr-3 text-[#0a9396]">👵</span><div><span class="font-semibold">Aging Population:</span> A rapidly increasing elderly demographic necessitates robust solutions for independent living and remote monitoring.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3 text-[#0a9396]">❤️</span><div><span class="font-semibold">Chronic Diseases:</span> The rising prevalence of chronic conditions requires continuous management and adherence to treatment plans.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3 text-[#0a9396]">🌱</span><div><span class="font-semibold">Health Consciousness:</span> Growing proactive engagement in mental and physical well-being, seeking personalized routines.</div></li>
+                             <li class="flex items-start"><span class="text-2xl mr-3 text-[#0a9396]">🤝</span><div><span class="font-semibold">Caregiver Burden:</span> An increasing need for tools that simplify coordination and provide peace of mind for informal caregivers.</div></li>
+                             <li class="flex items-start"><span class="text-2xl mr-3 text-[#0a9396]">🤖</span><div><span class="font-semibold">AI & Wearables Advancements:</span> Maturation of AI for personalization and widespread adoption of smart devices enable sophisticated interventions.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="edge" class="py-16 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title">Our Competitive Advantage</h2>
+                <p class="section-subtitle">Sentiacare wins by uniquely integrating key areas where existing competitors typically operate in silos. This diagram illustrates our distinctive position in the market.</p>
+                <div class="mt-12 max-w-4xl mx-auto">
+                     <div class="card md:p-8">
+                        <div class="relative grid grid-cols-2 grid-rows-2 gap-px bg-gray-200 rounded-lg overflow-hidden">
+                            <!-- Central Sentiacare bubble -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#ee9b00] text-white p-4 rounded-full w-40 h-40 flex items-center justify-center text-center font-bold text-xl shadow-2xl z-10">Sentiacare</div>
+                            
+                            <!-- Quadrants representing market segments -->
+                            <div class="bg-white p-6 rounded-tl-lg text-center flex flex-col justify-center items-center h-40">
+                                <h4 class="font-semibold text-lg text-[#005f73]">Personal Wellness</h4>
+                                <p class="text-sm text-gray-500 mt-1">Meditation & Fitness Apps</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-tr-lg text-center flex flex-col justify-center items-center h-40">
+                                <h4 class="font-semibold text-lg text-[#005f73]">Productivity AI</h4>
+                                <p class="text-sm text-gray-500 mt-1">Task Managers & Focus Tools</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-bl-lg text-center flex flex-col justify-center items-center h-40">
+                                 <h4 class="font-semibold text-lg text-[#005f73]">Care Management</h4>
+                                 <p class="text-sm text-gray-500 mt-1">Medication & Caregiving Apps</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-br-lg text-center flex flex-col justify-center items-center h-40">
+                                 <h4 class="font-semibold text-lg text-[#005f73]">Healthcare Integration</h4>
+                                 <p class="text-sm text-gray-500 mt-1">EHR & Telehealth Platforms</p>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-600">Sentiacare stands out with its **True Holistic Integration**, combining personal well-being, productivity, and caregiving. Our **Proactive AI** anticipates needs, offering intelligent, adaptive optimization. We have **Multi-Generational Appeal** with intuitive design for all ages, and we are **Future-Proof**, built with a strategic vision for secure healthcare integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="roadmap" class="py-16 px-6 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title">Product Vision & Roadmap</h2>
+                <p class="section-subtitle">Our vision is to be the indispensable intelligent companion that empowers individuals and families to achieve balanced, healthier, and more connected lives. This timeline outlines our strategic milestones for the coming months and our long-term aspirations.</p>
+                <div class="mt-12 relative">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-[#0a9396]/30 -ml-0.5"></div>
+                    <div class="space-y-12">
+                        <div class="relative flex justify-center">
+                            <div class="md:ml-auto md:w-5/12 card text-left">
+                                <h3 class="font-bold text-xl text-[#005f73]">Month 1: Foundation & Core MVP</h3>
+                                <p class="text-gray-600 mt-2">Laying the architectural groundwork, developing secure user authentication, and implementing the essential features for our Minimum Viable Product (MVP), including basic medication reminders and vital tracking. Followed by intensive internal testing.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <div class="md:mr-auto md:w-5/12 card text-left">
+                                <h3 class="font-bold text-xl text-[#005f73]">Month 2: Integration & Beta Launch</h3>
+                                <p class="text-gray-600 mt-2">Expanding functionality to include the Care Circle feature and integrating initial AI refinements for personalized suggestions. This phase culminates in a controlled closed beta launch to gather crucial early user feedback.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <div class="md:ml-auto md:w-5/12 card text-left">
+                                <h3 class="font-bold text-xl text-[#005f73]">Month 3: Iteration & Public Prep</h3>
+                                <p class="text-gray-600 mt-2">Dedicated to analyzing insights from our beta program, implementing critical bug fixes, and making high-impact usability improvements. We also finalize preparations for a phased public launch, ensuring a robust and polished product.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <div class="md:mr-auto md:w-5/12 card text-left border-2 border-[#ee9b00]">
+                                <h3 class="font-bold text-xl text-[#001219]">Future Vision (Beyond 12 Months)</h3>
+                                <p class="text-gray-600 mt-2">Our long-term aspirations include secure, consented data integration with medical professionals, leveraging advanced predictive health insights, and expanding smart home and ambient computing integration for a truly seamless experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="business-model" class="py-16 px-6">
+            <div class="container mx-auto text-center">
+                 <h2 class="section-title">Business Model & Go-to-Market Strategy</h2>
+                 <p class="section-subtitle">We've designed a sustainable monetization model for growth and a targeted strategy to reach our users.</p>
+                 <div class="mt-12 grid md:grid-cols-2 gap-12">
+                     <div class="card">
+                         <h3 class="font-bold text-2xl mb-4">Freemium Subscription Model</h3>
+                         <p class="text-gray-600 mb-4">Our tiered approach ensures accessibility while incentivizing upgrades to unlock Sentiacare's full potential.</p>
+                         <div class="flex flex-col md:flex-row justify-center gap-6">
+                            <div class="border border-gray-200 p-6 rounded-lg flex-1">
+                                <h4 class="font-bold text-xl">Free Tier</h4>
+                                <p class="text-sm text-gray-500">Ideal for individual basic use.</p>
+                                <ul class="mt-4 space-y-2 text-left text-gray-700">
+                                    <li>✅ Basic Habit Tracking (3 habits)</li>
+                                    <li>✅ Medication Reminders</li>
+                                    <li>✅ Manual Vitals Log</li>
+                                </ul>
+                            </div>
+                            <div class="border-2 border-[#0a9396] p-6 rounded-lg flex-1 relative">
+                                <span class="absolute top-0 -translate-y-1/2 bg-[#0a9396] text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
+                                <h4 class="font-bold text-xl">Premium Tier</h4>
+                                <p class="text-sm text-gray-500">For comprehensive individual & family care.</p>
+                                <ul class="mt-4 space-y-2 text-left text-gray-700">
+                                    <li>✅ Advanced AI Personalization</li>
+                                    <li>✅ Multi-Profile Care Management (up to 5)</li>
+                                    <li>✅ Wearable Device Sync & Insights</li>
+                                    <li>✅ Full Data History & Reports</li>
+                                    <li>✅ Priority Support</li>
+                                </ul>
+                            </div>
+                         </div>
+                     </div>
+                     <div class="card">
+                         <h3 class="font-bold text-2xl mb-4">Go-to-Market Funnel</h3>
+                         <p class="text-gray-600 mb-4">Our phased launch and multi-channel acquisition strategy drives users through a clear journey from awareness to active engagement and conversion.</p>
+                          <div class="space-y-2 text-white font-semibold">
+                            <div class="bg-[#005f73] p-3 rounded-lg w-full">Awareness (Digital Ads, Content, SEO)</div>
+                            <div class="bg-[#0a9396] p-3 rounded-lg w-10/12 mx-auto">Acquisition (Freemium Adoption)</div>
+                            <div class="bg-[#94d2bd] p-3 rounded-lg w-8/12 mx-auto text-black">Activation (Core Feature Use)</div>
+                            <div class="bg-[#e9d8a6] p-3 rounded-lg w-6/12 mx-auto text-black">Conversion (Upgrade to Premium)</div>
+                            <div class="bg-[#ee9b00] p-3 rounded-lg w-4/12 mx-auto">Referral (Invite to Care Circle)</div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+         <section id="kpis" class="py-16 px-6 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title">Measuring Our Success</h2>
+                <p class="section-subtitle">We focus on key performance indicators that measure engagement, effectiveness, and business viability, ensuring we deliver on our promises and drive sustainable growth.</p>
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="card text-center">
+                        <p class="text-4xl font-extrabold text-[#005f73]">3+</p>
+                        <p class="mt-2 font-semibold">Modules Engaged Weekly</p>
+                        <p class="text-xs text-gray-500 mt-1">(North Star Metric)</p>
+                    </div>
+                    <div class="card text-center">
+                        <p class="text-4xl font-extrabold text-[#005f73]">95%</p>
+                        <p class="mt-2 font-semibold">Medication Adherence</p>
+                         <p class="text-xs text-gray-500 mt-1">(Target Rate)</p>
+                    </div>
+                    <div class="card text-center">
+                        <p class="text-4xl font-extrabold text-[#005f73]">40%</p>
+                        <p class="mt-2 font-semibold">Care Circle Engagement</p>
+                         <p class="text-xs text-gray-500 mt-1">(User Adoption)</p>
+                    </div>
+                     <div class="card text-center">
+                        <p class="text-4xl font-extrabold text-[#005f73]">25%</p>
+                        <p class="mt-2 font-semibold">AI Suggestion Acceptance</p>
+                         <p class="text-xs text-gray-500 mt-1">(AI Value Metric)</p>
+                    </div>
+                     <div class="card text-center">
+                        <p class="text-4xl font-extrabold text-[#005f73]">15%</p>
+                        <p class="mt-2 font-semibold">Premium Conversion</p>
+                         <p class="text-xs text-gray-500 mt-1">(Business Goal)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="py-20 px-6 bg-[#001219] text-white">
+            <div class="container mx-auto text-center">
+                 <h2 class="text-4xl font-extrabold">Join Us in Building the Future of Holistic Well-being & Care.</h2>
+                 <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Whether you're an investor, a potential partner, or a supporter of our mission, we invite you to connect with us.</p>
+                 <div class="mt-8">
+                     <a href="mailto:your.email@example.com" class="bg-[#ee9b00] text-black font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#e9d8a6] transition-colors">Contact Us</a>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 text-center py-6">
+        <p class="text-gray-500">&copy; 2025 Sentiacare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapLabel = (label) => {
+            if (typeof label !== 'string') return label; // Ensure it's a string
+            if (label.length > 16) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > 16 && currentLine !== '') {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                lines.push(currentLine);
+                return lines;
+            }
+            return label;
+        };
+
+        // Chart.js configuration for Market Growth
+        const ctx = document.getElementById('marketChart').getContext('2d');
+        const marketChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2023', '2024', '2025', '2026', '2027', '2028'],
+                datasets: [{
+                    label: 'Digital Health Market Size (in Billions USD)',
+                    data: [250, 310, 380, 460, 550, 660],
+                    backgroundColor: 'rgba(10, 147, 150, 0.2)', // #0a9396 with transparency
+                    borderColor: '#0a9396',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#0a9396',
+                    pointBorderColor: '#005f73',
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Market Size (USD Billions)',
+                            color: '#495057'
+                        },
+                        ticks: {
+                           callback: function(value) {
+                                return '$' + value + 'B';
+                            },
+                            color: '#495057'
+                        },
+                        grid: {
+                            color: '#e9ecef'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            color: '#495057'
+                        },
+                        ticks: {
+                            color: '#495057'
+                        },
+                        grid: {
+                            color: '#e9ecef'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: '#001219'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            },
+                            label: function(tooltipItem) {
+                                return tooltipItem.dataset.label + ': $' + tooltipItem.raw + 'B';
+                            }
+                        },
+                        backgroundColor: '#001219',
+                        titleColor: '#e9d8a6',
+                        bodyColor: '#e9d8a6',
+                        borderColor: '#0a9396',
+                        borderWidth: 1
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
